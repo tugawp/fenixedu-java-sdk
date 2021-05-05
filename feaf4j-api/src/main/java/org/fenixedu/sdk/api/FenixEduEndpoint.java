@@ -30,6 +30,7 @@ public enum FenixEduEndpoint {
 
     DEGREES("degrees", FenixEduScope.PUBLIC, HttpMethod.GET, MediaType.APPLICATION_JSON, JsonArray.class), DEGREE("degrees/%s",
             FenixEduScope.PUBLIC, HttpMethod.GET, MediaType.APPLICATION_JSON, JsonObject.class), DEGREE_COURSES("degrees/%s/courses",
+            FenixEduScope.PUBLIC, HttpMethod.GET, MediaType.APPLICATION_JSON, JsonArray.class), DEGREE_CURRICULAR_GROUPS("degrees/%s/curricularGroups",
             FenixEduScope.PUBLIC, HttpMethod.GET, MediaType.APPLICATION_JSON, JsonArray.class),
 
     PERSON("person", FenixEduScope.PERSONAL, HttpMethod.GET, MediaType.APPLICATION_JSON, JsonObject.class), PERSON_CALENDAR_CLASSES(

@@ -450,6 +450,41 @@ public class FenixEduClientImpl extends FenixEduClientBaseImpl implements FenixE
         params.put("academicTerm", academicTerm);
         return invoke(FenixEduEndpoint.DEGREE_COURSES, params, degreeId);
     }
+    
+    /**
+     * Retrieves information about the degree's curricular groups.
+     *
+     * <p>
+     * <b>Scope:</b> Public
+     * </p>
+     *
+     * @param degreeId the degree's id
+     * @return a JsonArray with all the degree's curricular groups.
+     * @throws FenixEduClientException .
+     */
+    @Override
+    public JsonArray getDegreeCurricularGroups(String degreeId) {
+        return invoke(FenixEduEndpoint.DEGREE_COURSES, degreeId);
+    }
+
+    /**
+     * Retrieves information about the degree's curricular groups in a particular academic term.
+     *
+     * <p>
+     * <b>Scope:</b> Public
+     * </p>
+     *
+     * @param degreeId the degree's id
+     * @param academicTerm the execution year (e.g. 2010/2011)
+     * @return a JsonArray with all the degree curricular groups within the specified academic term.
+     * @throws FenixEduClientException .
+     */
+    @Override
+    public JsonArray getDegreeCurricularGroups(String degreeId, String academicTerm) {
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("academicTerm", academicTerm);
+        return invoke(FenixEduEndpoint.DEGREE_COURSES, params, degreeId);
+    }
 
     /**
      * Obtains the courses of the user in context for the current academic term.

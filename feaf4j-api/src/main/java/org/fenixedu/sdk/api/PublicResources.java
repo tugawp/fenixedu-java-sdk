@@ -39,6 +39,10 @@ public interface PublicResources {
 
     JsonArray getDegreeCourses(String degreeId, String academicTerm);
 
+    JsonArray getDegreeCurricularGroups(String degreeId);
+
+    JsonArray getDegreeCurricularGroups(String degreeId, String academicTerm);
+
     JsonObject getParking();
 
     JsonObject getShuttle();
